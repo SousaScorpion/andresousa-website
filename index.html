@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andre Sousa — IT Professional & AI Builder</title>
-  <meta name="description" content="Andre Sousa — IT professional building AI tools and escaping the 9-to-5 from Elgin, Scotland." />
+  <title>Andre Sousa</title>
+  <meta name="description" content="Andre Sousa — Portuguese, living in Scotland, fixing systems by day and building things I care about by night." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -12,14 +12,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0a0a0a;
-      --bg2: #111111;
-      --bg3: #1a1a1a;
-      --border: #222222;
-      --text: #e8e8e8;
-      --muted: #888888;
-      --accent: #ff4500;
-      --accent2: #ff6b35;
+      --bg: #0c0f14;
+      --bg2: #131720;
+      --bg3: #1a1f2e;
+      --border: #1e2535;
+      --text: #dde3ee;
+      --muted: #7a8499;
+      --accent: #5b8dee;
+      --accent2: #7ba7f7;
       --mono: 'JetBrains Mono', monospace;
     }
 
@@ -43,16 +43,16 @@
       align-items: center;
       justify-content: space-between;
       padding: 1.2rem 2rem;
-      background: rgba(10,10,10,0.85);
-      backdrop-filter: blur(12px);
+      background: rgba(12,15,20,0.88);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav-logo {
       font-family: var(--mono);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: var(--accent);
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       text-decoration: none;
     }
 
@@ -68,7 +68,6 @@
       font-size: 0.875rem;
       font-weight: 500;
       transition: color 0.2s;
-      letter-spacing: 0.02em;
     }
 
     .nav-links a:hover { color: var(--text); }
@@ -79,43 +78,44 @@
       display: flex;
       align-items: center;
       padding: 8rem 2rem 4rem;
-      max-width: 1000px;
+      max-width: 860px;
       margin: 0 auto;
     }
 
     .hero-inner { width: 100%; }
 
-    .hero-tag {
+    .hero-greeting {
       font-family: var(--mono);
-      font-size: 0.8rem;
-      color: var(--accent);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.06em;
     }
 
     .hero h1 {
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-size: clamp(2.6rem, 6.5vw, 4.8rem);
       font-weight: 800;
       line-height: 1.05;
       letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
     }
 
-    .hero h1 span {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
     }
 
-    .hero-sub {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
+    .hero-bio {
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
       color: var(--muted);
-      max-width: 580px;
-      line-height: 1.7;
-      margin-bottom: 3rem;
+      max-width: 600px;
+      line-height: 1.8;
+      margin-bottom: 0.75rem;
     }
+
+    .hero-bio + .hero-bio { margin-bottom: 2.5rem; }
+
+    .hero-bio strong { color: var(--text); font-weight: 500; }
 
     .hero-cta {
       display: flex;
@@ -127,13 +127,12 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.85rem 1.75rem;
+      padding: 0.8rem 1.6rem;
       border-radius: 6px;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.2s;
-      letter-spacing: 0.01em;
     }
 
     .btn-primary {
@@ -154,219 +153,191 @@
 
     .btn-ghost:hover {
       color: var(--text);
-      border-color: #444;
+      border-color: #3a4560;
     }
 
     /* SECTIONS */
     section {
-      padding: 6rem 2rem;
-      max-width: 1000px;
+      padding: 5.5rem 2rem;
+      max-width: 860px;
       margin: 0 auto;
     }
 
     .section-label {
       font-family: var(--mono);
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--accent);
-      letter-spacing: 0.15em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.6rem;
     }
 
     .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-size: clamp(1.7rem, 3.5vw, 2.5rem);
       font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 2.5rem;
+      letter-spacing: -0.025em;
+      margin-bottom: 2.25rem;
       line-height: 1.1;
     }
 
     hr.divider {
       border: none;
       border-top: 1px solid var(--border);
-      max-width: 1000px;
+      max-width: 860px;
       margin: 0 auto;
     }
 
-    /* ABOUT */
-    .about-grid {
+    /* NOW / CURRENTLY */
+    .now-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
+      gap: 1rem;
     }
 
-    .about-text p {
-      color: var(--muted);
-      margin-bottom: 1.25rem;
-      font-size: 1.05rem;
-      line-height: 1.75;
-    }
-
-    .about-text p strong { color: var(--text); font-weight: 600; }
-
-    .about-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .stat-card {
+    .now-item {
       background: var(--bg2);
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 1.25rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
     }
 
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--accent);
-      font-family: var(--mono);
-      line-height: 1;
-      margin-bottom: 0.25rem;
+    .now-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 6px;
+      flex-shrink: 0;
     }
 
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--muted);
+    .now-dot.dim { background: var(--muted); }
+
+    .now-text {
+      font-size: 0.925rem;
+      color: var(--text);
       font-weight: 500;
+      line-height: 1.5;
     }
 
-    /* PROJECTS */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
+    .now-sub {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 400;
+      margin-top: 0.2rem;
     }
 
-    .project-card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 2rem;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s, transform 0.2s;
+    /* THINGS I BUILT */
+    .built-list {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    .project-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-3px);
+    .built-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 1.75rem 2rem;
+      background: var(--bg2);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+      border-bottom: 1px solid var(--border);
     }
 
-    .project-icon {
-      font-size: 2rem;
+    .built-item:last-child { border-bottom: none; }
+
+    .built-item:hover { background: var(--bg3); }
+
+    .built-item-icon {
+      font-size: 1.75rem;
       line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
 
-    .project-title {
-      font-size: 1.2rem;
+    .built-item-body { flex: 1; }
+
+    .built-item-title {
+      font-size: 1rem;
       font-weight: 700;
+      margin-bottom: 0.3rem;
       letter-spacing: -0.01em;
     }
 
-    .project-desc {
+    .built-item-desc {
+      font-size: 0.9rem;
       color: var(--muted);
-      font-size: 0.925rem;
-      line-height: 1.65;
-      flex: 1;
+      line-height: 1.6;
     }
 
-    .project-tags {
+    .built-item-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
     }
 
     .tag {
       font-family: var(--mono);
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       color: var(--accent);
-      background: rgba(255, 69, 0, 0.1);
-      border: 1px solid rgba(255, 69, 0, 0.2);
-      padding: 0.2rem 0.6rem;
+      background: rgba(91,141,238,0.08);
+      border: 1px solid rgba(91,141,238,0.18);
+      padding: 0.18rem 0.55rem;
       border-radius: 4px;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
     }
 
-    .project-arrow {
-      color: var(--muted);
-      font-size: 1.2rem;
-      align-self: flex-end;
-      transition: color 0.2s, transform 0.2s;
+    .built-item-arrow {
+      color: var(--border);
+      font-size: 1.1rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+      transition: color 0.15s;
     }
 
-    .project-card:hover .project-arrow {
-      color: var(--accent);
-      transform: translateX(3px);
-    }
-
-    /* SKILLS */
-    .skills-section {
-      padding-top: 0;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 0.75rem;
-    }
-
-    .skill-chip {
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 0.65rem 1rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--muted);
-      text-align: center;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .skill-chip:hover {
-      color: var(--text);
-      border-color: #444;
-    }
+    .built-item:hover .built-item-arrow { color: var(--accent); }
 
     /* CONTACT */
-    .contact-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
+    .contact-wrap {
+      max-width: 520px;
     }
 
-    .contact-text p {
+    .contact-wrap p {
       color: var(--muted);
       font-size: 1.05rem;
-      line-height: 1.75;
+      line-height: 1.8;
       margin-bottom: 2rem;
     }
+
+    .contact-wrap p strong { color: var(--text); font-weight: 500; }
 
     .contact-links {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.75rem;
     }
 
     .contact-link {
       display: flex;
       align-items: center;
       gap: 1rem;
-      padding: 1rem 1.25rem;
+      padding: 0.9rem 1.25rem;
       background: var(--bg2);
       border: 1px solid var(--border);
       border-radius: 8px;
       text-decoration: none;
       color: var(--text);
+      font-size: 0.9rem;
       font-weight: 500;
-      font-size: 0.925rem;
       transition: border-color 0.2s, transform 0.2s;
     }
 
@@ -375,16 +346,13 @@
       transform: translateX(4px);
     }
 
-    .contact-link-icon {
-      font-size: 1.3rem;
-      min-width: 1.5rem;
-    }
+    .contact-link-icon { font-size: 1.2rem; min-width: 1.4rem; }
 
-    .contact-link-label {
+    .contact-link-sub {
       color: var(--muted);
-      font-size: 0.8rem;
-      display: block;
+      font-size: 0.78rem;
       font-weight: 400;
+      display: block;
     }
 
     /* FOOTER */
@@ -393,26 +361,20 @@
       padding: 2rem;
       text-align: center;
       color: var(--muted);
-      font-size: 0.825rem;
+      font-size: 0.8rem;
       font-family: var(--mono);
     }
 
     footer a { color: var(--accent); text-decoration: none; }
 
     /* MOBILE */
-    @media (max-width: 700px) {
+    @media (max-width: 640px) {
       nav { padding: 1rem 1.25rem; }
       .nav-links { gap: 1.25rem; }
-      .nav-links a { font-size: 0.8rem; }
-
       section { padding: 4rem 1.25rem; }
-
-      .about-grid,
-      .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-
-      .projects-grid { grid-template-columns: 1fr; }
-
-      .hero { padding: 7rem 1.25rem 3rem; }
+      .now-grid { grid-template-columns: 1fr; }
+      .hero { padding: 6.5rem 1.25rem 3rem; }
+      .built-item { padding: 1.25rem; gap: 1rem; }
     }
   </style>
 </head>
@@ -422,8 +384,8 @@
   <nav>
     <a href="#" class="nav-logo">andresousa.website</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#now">Now</a></li>
+      <li><a href="#built">Things I built</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -431,164 +393,147 @@
   <!-- HERO -->
   <div class="hero">
     <div class="hero-inner">
-      <p class="hero-tag">// IT Professional &amp; AI Builder</p>
-      <h1>Andre Sousa.<br /><span>Building the exit.</span></h1>
-      <p class="hero-sub">
-        Portuguese IT professional based in Elgin, Scotland. I fix systems for a living
-        and build AI tools in the hours between. Currently working on something bigger —
-        a way out of the 9-to-5, one line of code at a time.
+      <p class="hero-greeting">Hello, I'm —</p>
+      <h1>Andre Sousa.<br /><em>Just a person.</em></h1>
+      <p class="hero-bio">
+        Portuguese. Living in <strong>Elgin, Scotland</strong> with my partner Sonia and our two kids,
+        Afonso and Beatriz. I've been in IT support for over a decade —
+        the high-stakes kind, where things really can't go wrong.
+      </p>
+      <p class="hero-bio">
+        Outside of work I build things. Not because I'm trying to be a tech guy.
+        Because I like making things that didn't exist before, and because
+        I'm quietly building a way to spend more time where I want to be.
       </p>
       <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">See my work &rarr;</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        <a href="#built" class="btn btn-primary">What I've built</a>
+        <a href="#contact" class="btn btn-ghost">Say hello</a>
       </div>
     </div>
   </div>
 
   <hr class="divider" />
 
-  <!-- ABOUT -->
-  <section id="about">
-    <p class="section-label">// who I am</p>
-    <h2 class="section-title">IT pro with a plan.</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>
-          I've spent years in <strong>high-security IT support</strong> — the kind where the systems
-          can't break, the processes are rigid, and the pressure is real. I know enterprise infrastructure
-          from the ground up.
-        </p>
-        <p>
-          But the day job isn't the whole story. Outside of work I've been building <strong>Joker</strong>
-          — a personal AI assistant running entirely on local hardware, zero cloud cost, wired into
-          my calendar, email, content pipeline, and business automations.
-        </p>
-        <p>
-          The goal is simple: build something that generates income without requiring me to sit in an office.
-          <strong>Location-independent. Family-first. Grumpy about the system, building around it.</strong>
-        </p>
+  <!-- NOW -->
+  <section id="now">
+    <p class="section-label">// right now</p>
+    <h2 class="section-title">What I'm doing.</h2>
+    <div class="now-grid">
+      <div class="now-item">
+        <span class="now-dot"></span>
+        <span class="now-text">
+          Working in IT support
+          <span class="now-sub">High-security UK government sector, Capgemini</span>
+        </span>
       </div>
-      <div class="about-stats">
-        <div class="stat-card">
-          <div class="stat-number">10+</div>
-          <div class="stat-label">Years in IT support &amp; infrastructure</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">RTX 3080</div>
-          <div class="stat-label">Local AI rig — Ollama, SDXL, TTS, all free</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">0 €/mo</div>
-          <div class="stat-label">AI operating cost — fully self-hosted stack</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">Building</div>
-          <div class="stat-label">Grumpy System Elf — products for burned-out IT workers</div>
-        </div>
+      <div class="now-item">
+        <span class="now-dot"></span>
+        <span class="now-text">
+          Building Grumpy System Elf
+          <span class="now-sub">A brand for burned-out IT workers. Products, content, getting out.</span>
+        </span>
+      </div>
+      <div class="now-item">
+        <span class="now-dot"></span>
+        <span class="now-text">
+          Running Joker — my personal AI
+          <span class="now-sub">Local LLMs, zero cloud cost, fully automated on an RTX 3080</span>
+        </span>
+      </div>
+      <div class="now-item">
+        <span class="now-dot dim"></span>
+        <span class="now-text">
+          Based in Elgin, Scotland
+          <span class="now-sub">Originally from Portugal. Working toward not having to choose.</span>
+        </span>
       </div>
     </div>
   </section>
 
   <hr class="divider" />
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <p class="section-label">// what I build</p>
-    <h2 class="section-title">Real projects. No fluff.</h2>
-    <div class="projects-grid">
+  <!-- THINGS I BUILT -->
+  <section id="built">
+    <p class="section-label">// things I built</p>
+    <h2 class="section-title">Stuff that actually exists.</h2>
+    <div class="built-list">
 
-      <a href="https://andrethegrumpysystemelf.com" target="_blank" rel="noopener" class="project-card">
-        <div class="project-icon">😤</div>
-        <div class="project-title">Grumpy System Elf</div>
-        <p class="project-desc">
-          A brand built for burned-out IT workers. No corporate spin. Practical guides,
-          honest content, and tools for people who've had enough of the system — but still
-          have to show up on Monday.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Content</span>
-          <span class="tag">Products</span>
-          <span class="tag">IT Workers</span>
+      <a href="https://andrethegrumpysystemelf.com" target="_blank" rel="noopener" class="built-item">
+        <span class="built-item-icon">😤</span>
+        <div class="built-item-body">
+          <div class="built-item-title">Grumpy System Elf</div>
+          <p class="built-item-desc">
+            My brand and exit plan. Practical content and digital products for IT workers
+            who are exhausted by the system but still have to show up on Monday.
+            Built from scratch — content, products, automation, all of it.
+          </p>
+          <div class="built-item-tags">
+            <span class="tag">Brand</span>
+            <span class="tag">Digital Products</span>
+            <span class="tag">Content</span>
+          </div>
         </div>
-        <span class="project-arrow">→</span>
+        <span class="built-item-arrow">→</span>
       </a>
 
-      <div class="project-card" style="cursor:default;">
-        <div class="project-icon">🤖</div>
-        <div class="project-title">Joker AI Assistant</div>
-        <p class="project-desc">
-          Personal AI system running on local hardware. Telegram bot, morning briefings,
-          Gmail monitoring, content scheduling, autonomous product generation, knowledge graph,
-          and a full voice pipeline. Costs me nothing to run.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">Ollama</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">SDXL</span>
+      <div class="built-item" style="cursor:default;">
+        <span class="built-item-icon">🤖</span>
+        <div class="built-item-body">
+          <div class="built-item-title">Joker — Personal AI Assistant</div>
+          <p class="built-item-desc">
+            My own AI system, running entirely on local hardware. Handles morning briefings,
+            email monitoring, content scheduling, product generation, knowledge graph memory,
+            and a voice pipeline. Built for me, not for a demo.
+          </p>
+          <div class="built-item-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Ollama</span>
+            <span class="tag">SDXL</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">RTX 3080</span>
+          </div>
         </div>
-        <span class="project-arrow" style="color:transparent;">→</span>
+        <span class="built-item-arrow" style="color:transparent;">→</span>
       </div>
 
-      <div class="project-card" style="cursor:default;">
-        <div class="project-icon">🎬</div>
-        <div class="project-title">Autonomous Video Pipeline</div>
-        <p class="project-desc">
-          Daily video generation using local SDXL + TTS — no API costs. Posts to YouTube,
-          TikTok, and Instagram automatically. Runs twice a day. I don't touch it.
-        </p>
-        <div class="project-tags">
-          <span class="tag">SDXL</span>
-          <span class="tag">Kokoro TTS</span>
-          <span class="tag">FFmpeg</span>
-          <span class="tag">Automation</span>
+      <div class="built-item" style="cursor:default;">
+        <span class="built-item-icon">🎬</span>
+        <div class="built-item-body">
+          <div class="built-item-title">Autonomous Video Pipeline</div>
+          <p class="built-item-desc">
+            Daily short-form videos generated and posted without touching anything.
+            Local SDXL images, local TTS, FFmpeg edit, automatic upload.
+            Runs twice a day. Costs me nothing.
+          </p>
+          <div class="built-item-tags">
+            <span class="tag">SDXL</span>
+            <span class="tag">Kokoro TTS</span>
+            <span class="tag">FFmpeg</span>
+            <span class="tag">YouTube</span>
+            <span class="tag">TikTok</span>
+          </div>
         </div>
-        <span class="project-arrow" style="color:transparent;">→</span>
+        <span class="built-item-arrow" style="color:transparent;">→</span>
       </div>
 
-      <div class="project-card" style="cursor:default;">
-        <div class="project-icon">🧠</div>
-        <div class="project-title">Knowledge Graph + Memory</div>
-        <p class="project-desc">
-          Every conversation Joker has gets distilled into a searchable knowledge graph.
-          SQLite FTS5 hybrid memory, entity extraction, session summarisation.
-          The AI that actually remembers.
-        </p>
-        <div class="project-tags">
-          <span class="tag">SQLite</span>
-          <span class="tag">NLP</span>
-          <span class="tag">FTS5</span>
-          <span class="tag">Graphs</span>
+      <div class="built-item" style="cursor:default;">
+        <span class="built-item-icon">🧠</span>
+        <div class="built-item-body">
+          <div class="built-item-title">Knowledge Graph + Memory System</div>
+          <p class="built-item-desc">
+            Every session Joker has is distilled into a persistent knowledge graph.
+            Entity extraction, SQLite FTS5 hybrid memory, session summarisation.
+            The AI that actually remembers what matters.
+          </p>
+          <div class="built-item-tags">
+            <span class="tag">SQLite</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Knowledge Graph</span>
+          </div>
         </div>
-        <span class="project-arrow" style="color:transparent;">→</span>
+        <span class="built-item-arrow" style="color:transparent;">→</span>
       </div>
 
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- SKILLS -->
-  <section class="skills-section">
-    <p class="section-label">// tools &amp; tech</p>
-    <h2 class="section-title" style="margin-bottom:1.5rem;">What I work with.</h2>
-    <div class="skills-grid">
-      <div class="skill-chip">Python</div>
-      <div class="skill-chip">Linux / Ubuntu</div>
-      <div class="skill-chip">Ollama / LLMs</div>
-      <div class="skill-chip">FastAPI</div>
-      <div class="skill-chip">SQLite / FTS5</div>
-      <div class="skill-chip">SDXL / Diffusers</div>
-      <div class="skill-chip">Telegram API</div>
-      <div class="skill-chip">Gmail API</div>
-      <div class="skill-chip">systemd</div>
-      <div class="skill-chip">Git</div>
-      <div class="skill-chip">Cloudflare</div>
-      <div class="skill-chip">Docker</div>
-      <div class="skill-chip">Windows Server</div>
-      <div class="skill-chip">Active Directory</div>
-      <div class="skill-chip">Networking</div>
-      <div class="skill-chip">CUDA / RTX 3080</div>
     </div>
   </section>
 
@@ -596,46 +541,42 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <p class="section-label">// get in touch</p>
-    <h2 class="section-title">Let's talk.</h2>
-    <div class="contact-inner">
-      <div class="contact-text">
-        <p>
-          Whether it's IT consulting, AI tooling, or just someone who gets it —
-          I'm open to conversations that go somewhere real.
-          No time-wasters. No corporate theatre.
-        </p>
-        <a href="mailto:andre@andrethegrumpysystemelf.com" class="btn btn-primary">
-          Send me an email &rarr;
-        </a>
-      </div>
+    <p class="section-label">// contact</p>
+    <h2 class="section-title">Say hello.</h2>
+    <div class="contact-wrap">
+      <p>
+        I'm not looking for freelance work or sales calls.
+        But if you're a real person who wants to have a real conversation —
+        about IT, AI, building things, or getting out of the 9-to-5 —
+        <strong>I'm genuinely open to that.</strong>
+      </p>
       <div class="contact-links">
-        <a href="https://andrethegrumpysystemelf.com" target="_blank" rel="noopener" class="contact-link">
-          <span class="contact-link-icon">😤</span>
+        <a href="mailto:andre@andrethegrumpysystemelf.com" class="contact-link">
+          <span class="contact-link-icon">✉️</span>
           <span>
-            Grumpy System Elf
-            <span class="contact-link-label">andrethegrumpysystemelf.com</span>
-          </span>
-        </a>
-        <a href="https://grumpysystemelf.gumroad.com" target="_blank" rel="noopener" class="contact-link">
-          <span class="contact-link-icon">📦</span>
-          <span>
-            Products on Gumroad
-            <span class="contact-link-label">grumpysystemelf.gumroad.com</span>
+            andre@andrethegrumpysystemelf.com
+            <span class="contact-link-sub">Email — best way to reach me</span>
           </span>
         </a>
         <a href="https://www.linkedin.com/in/andre-sousa-350820a7" target="_blank" rel="noopener" class="contact-link">
           <span class="contact-link-icon">💼</span>
           <span>
             LinkedIn
-            <span class="contact-link-label">Connect professionally</span>
+            <span class="contact-link-sub">Professional background</span>
           </span>
         </a>
-        <a href="mailto:andre@andrethegrumpysystemelf.com" class="contact-link">
-          <span class="contact-link-icon">✉️</span>
+        <a href="https://andrethegrumpysystemelf.com" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon">😤</span>
           <span>
-            Email
-            <span class="contact-link-label">andre@andrethegrumpysystemelf.com</span>
+            Grumpy System Elf
+            <span class="contact-link-sub">My brand — andrethegrumpysystemelf.com</span>
+          </span>
+        </a>
+        <a href="https://grumpysystemelf.gumroad.com" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon">📦</span>
+          <span>
+            Products
+            <span class="contact-link-sub">grumpysystemelf.gumroad.com</span>
           </span>
         </a>
       </div>
@@ -644,7 +585,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>Built by Andre Sousa &mdash; Elgin, Scotland &mdash;
+    <p>Andre Sousa &mdash; Elgin, Scotland &mdash;
       <a href="https://andrethegrumpysystemelf.com">Grumpy System Elf</a>
     </p>
   </footer>
