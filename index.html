@@ -4,23 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andre Sousa</title>
-  <meta name="description" content="Andre Sousa — Portuguese, living in Scotland, fixing systems by day and building things I care about by night." />
+  <meta name="description" content="Andre Sousa — IT professional, AI builder, fighting for financial freedom from Elgin, Scotland." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0c0f14;
-      --bg2: #131720;
-      --bg3: #1a1f2e;
-      --border: #1e2535;
-      --text: #dde3ee;
-      --muted: #7a8499;
-      --accent: #5b8dee;
-      --accent2: #7ba7f7;
-      --mono: 'JetBrains Mono', monospace;
+      --bg: #0d0d0d;
+      --bg2: #141414;
+      --border: #1f1f1f;
+      --text: #e2e2e2;
+      --muted: #777777;
+      --soft: #999999;
+      --accent: #c8a96e;
     }
 
     html { scroll-behavior: smooth; }
@@ -29,8 +27,8 @@
       background: var(--bg);
       color: var(--text);
       font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 17px;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -39,21 +37,22 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
+      padding: 1.1rem 2.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.2rem 2rem;
-      background: rgba(12,15,20,0.88);
-      backdrop-filter: blur(14px);
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
 
-    .nav-logo {
-      font-family: var(--mono);
-      font-size: 0.875rem;
-      color: var(--accent);
-      letter-spacing: 0.04em;
+    .nav-name {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text);
       text-decoration: none;
+      letter-spacing: 0.01em;
     }
 
     .nav-links {
@@ -65,294 +64,214 @@
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       font-weight: 500;
       transition: color 0.2s;
+      letter-spacing: 0.03em;
     }
 
     .nav-links a:hover { color: var(--text); }
+
+    /* LAYOUT */
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
 
     /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
-      align-items: center;
-      padding: 8rem 2rem 4rem;
-      max-width: 860px;
-      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 7rem;
+      padding-bottom: 5rem;
     }
 
-    .hero-inner { width: 100%; }
-
-    .hero-greeting {
-      font-family: var(--mono);
-      font-size: 0.85rem;
+    .hero-location {
+      font-size: 0.8rem;
       color: var(--muted);
-      margin-bottom: 1.25rem;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
     }
 
     .hero h1 {
-      font-size: clamp(2.6rem, 6.5vw, 4.8rem);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.75rem;
+      font-family: 'Lora', serif;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+      color: var(--text);
     }
 
     .hero h1 em {
-      font-style: normal;
+      font-style: italic;
       color: var(--accent);
     }
 
-    .hero-bio {
-      font-size: clamp(1rem, 2.2vw, 1.15rem);
-      color: var(--muted);
-      max-width: 600px;
-      line-height: 1.8;
-      margin-bottom: 0.75rem;
+    .hero-opening {
+      font-size: 1.15rem;
+      color: var(--soft);
+      line-height: 1.85;
+      max-width: 620px;
     }
 
-    .hero-bio + .hero-bio { margin-bottom: 2.5rem; }
+    .hero-opening p { margin-bottom: 1.1rem; }
+    .hero-opening p:last-child { margin-bottom: 0; }
+    .hero-opening strong { color: var(--text); font-weight: 500; }
 
-    .hero-bio strong { color: var(--text); font-weight: 500; }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.8rem 1.6rem;
-      border-radius: 6px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
+    /* SECTION */
+    .section {
+      padding: 5rem 0;
     }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent2);
-      transform: translateY(-1px);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--muted);
-      border: 1px solid var(--border);
-    }
-
-    .btn-ghost:hover {
-      color: var(--text);
-      border-color: #3a4560;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 5.5rem 2rem;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-family: var(--mono);
-      font-size: 0.72rem;
+    .section-eyebrow {
+      font-size: 0.75rem;
       color: var(--accent);
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      margin-bottom: 0.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
 
-    .section-title {
-      font-size: clamp(1.7rem, 3.5vw, 2.5rem);
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      margin-bottom: 2.25rem;
-      line-height: 1.1;
-    }
-
-    hr.divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    /* NOW / CURRENTLY */
-    .now-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .now-item {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .now-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      margin-top: 6px;
-      flex-shrink: 0;
-    }
-
-    .now-dot.dim { background: var(--muted); }
-
-    .now-text {
-      font-size: 0.925rem;
-      color: var(--text);
-      font-weight: 500;
-      line-height: 1.5;
-    }
-
-    .now-sub {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--muted);
-      font-weight: 400;
-      margin-top: 0.2rem;
-    }
-
-    /* THINGS I BUILT */
-    .built-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .built-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
-      padding: 1.75rem 2rem;
-      background: var(--bg2);
-      text-decoration: none;
-      color: inherit;
-      transition: background 0.15s;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .built-item:last-child { border-bottom: none; }
-
-    .built-item:hover { background: var(--bg3); }
-
-    .built-item-icon {
-      font-size: 1.75rem;
-      line-height: 1;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .built-item-body { flex: 1; }
-
-    .built-item-title {
-      font-size: 1rem;
+    .section h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
       font-weight: 700;
-      margin-bottom: 0.3rem;
-      letter-spacing: -0.01em;
-    }
-
-    .built-item-desc {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .built-item-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.75rem;
-    }
-
-    .tag {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      color: var(--accent);
-      background: rgba(91,141,238,0.08);
-      border: 1px solid rgba(91,141,238,0.18);
-      padding: 0.18rem 0.55rem;
-      border-radius: 4px;
-      letter-spacing: 0.04em;
-    }
-
-    .built-item-arrow {
-      color: var(--border);
-      font-size: 1.1rem;
-      margin-top: 4px;
-      flex-shrink: 0;
-      transition: color 0.15s;
-    }
-
-    .built-item:hover .built-item-arrow { color: var(--accent); }
-
-    /* CONTACT */
-    .contact-wrap {
-      max-width: 520px;
-    }
-
-    .contact-wrap p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      line-height: 1.8;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
       margin-bottom: 2rem;
     }
 
-    .contact-wrap p strong { color: var(--text); font-weight: 500; }
-
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
+    .prose {
+      color: var(--soft);
+      font-size: 1.05rem;
+      line-height: 1.85;
     }
 
-    .contact-link {
+    .prose p { margin-bottom: 1.25rem; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { color: var(--text); font-weight: 500; }
+    .prose em { color: var(--accent); font-style: italic; }
+
+    /* BUILT */
+    .built-entry {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .built-entry:first-child { border-top: 1px solid var(--border); }
+
+    .built-header {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       gap: 1rem;
-      padding: 0.9rem 1.25rem;
+      margin-bottom: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .built-title {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .built-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .built-title a:hover { color: var(--accent); }
+
+    .built-year {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    .built-desc {
+      color: var(--soft);
+      font-size: 0.975rem;
+      line-height: 1.75;
+    }
+
+    /* HIRE */
+    .hire-block {
       background: var(--bg2);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      text-decoration: none;
-      color: var(--text);
+      border-radius: 10px;
+      padding: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .hire-block p {
+      color: var(--soft);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .hire-block p strong { color: var(--text); font-weight: 500; }
+
+    .hire-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--accent);
+      color: #0d0d0d;
+      font-weight: 700;
       font-size: 0.9rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .hire-email:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    /* LINKS */
+    .links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 2.5rem;
+    }
+
+    .link-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1.1rem;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--soft);
+      font-size: 0.85rem;
       font-weight: 500;
-      transition: border-color 0.2s, transform 0.2s;
+      transition: border-color 0.2s, color 0.2s;
     }
 
-    .contact-link:hover {
+    .link-chip:hover {
       border-color: var(--accent);
-      transform: translateX(4px);
-    }
-
-    .contact-link-icon { font-size: 1.2rem; min-width: 1.4rem; }
-
-    .contact-link-sub {
-      color: var(--muted);
-      font-size: 0.78rem;
-      font-weight: 400;
-      display: block;
+      color: var(--text);
     }
 
     /* FOOTER */
@@ -362,232 +281,174 @@
       text-align: center;
       color: var(--muted);
       font-size: 0.8rem;
-      font-family: var(--mono);
     }
 
-    footer a { color: var(--accent); text-decoration: none; }
-
     /* MOBILE */
-    @media (max-width: 640px) {
+    @media (max-width: 600px) {
       nav { padding: 1rem 1.25rem; }
       .nav-links { gap: 1.25rem; }
-      section { padding: 4rem 1.25rem; }
-      .now-grid { grid-template-columns: 1fr; }
-      .hero { padding: 6.5rem 1.25rem 3rem; }
-      .built-item { padding: 1.25rem; gap: 1rem; }
+      .page { padding: 0 1.25rem; }
+      .hero { padding-top: 6rem; }
+      .hire-block { padding: 1.75rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">andresousa.website</a>
+    <a href="#" class="nav-name">Andre Sousa</a>
     <ul class="nav-links">
-      <li><a href="#now">Now</a></li>
-      <li><a href="#built">Things I built</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#built">Built</a></li>
+      <li><a href="#hire">Hire me</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-inner">
-      <p class="hero-greeting">Hello, I'm —</p>
-      <h1>Andre Sousa.<br /><em>Just a person.</em></h1>
-      <p class="hero-bio">
-        Portuguese. Living in <strong>Elgin, Scotland</strong> with my partner Sonia and our two kids,
-        Afonso and Beatriz. I've been in IT support for over a decade —
-        the high-stakes kind, where things really can't go wrong.
-      </p>
-      <p class="hero-bio">
-        Outside of work I build things. Not because I'm trying to be a tech guy.
-        Because I like making things that didn't exist before, and because
-        I'm quietly building a way to spend more time where I want to be.
-      </p>
-      <div class="hero-cta">
-        <a href="#built" class="btn btn-primary">What I've built</a>
-        <a href="#contact" class="btn btn-ghost">Say hello</a>
+  <div class="page">
+
+    <!-- HERO -->
+    <div class="hero">
+      <p class="hero-location">Elgin, Scotland &mdash; Originally from Portugal</p>
+      <h1>Andre Sousa.<br /><em>I build things<br />to get free.</em></h1>
+      <div class="hero-opening">
+        <p>
+          I'm an IT professional with over a decade in the field —
+          the high-stakes kind, supporting critical systems for UK government.
+          That's my day job. It pays the bills. It's not the whole story.
+        </p>
+        <p>
+          The whole story is that I've been dealing with <strong>depression and anxiety</strong>,
+          trying to build something of my own while holding everything else together —
+          a career, a family, a life far from where I started.
+          Sonia, Afonso, Beatriz. That's what this is for.
+        </p>
+        <p>
+          So I built. First <strong>Scorpion</strong>, then <strong>Joker</strong> —
+          personal AI systems, running on my own hardware, doing real work.
+          Not side projects. Lifelines. And along the way I learned
+          I'm actually pretty good at this.
+        </p>
       </div>
     </div>
-  </div>
 
-  <hr class="divider" />
+    <hr class="divider" />
 
-  <!-- NOW -->
-  <section id="now">
-    <p class="section-label">// right now</p>
-    <h2 class="section-title">What I'm doing.</h2>
-    <div class="now-grid">
-      <div class="now-item">
-        <span class="now-dot"></span>
-        <span class="now-text">
-          Working in IT support
-          <span class="now-sub">High-security UK government sector, Capgemini</span>
-        </span>
-      </div>
-      <div class="now-item">
-        <span class="now-dot"></span>
-        <span class="now-text">
-          Building Grumpy System Elf
-          <span class="now-sub">A brand for burned-out IT workers. Products, content, getting out.</span>
-        </span>
-      </div>
-      <div class="now-item">
-        <span class="now-dot"></span>
-        <span class="now-text">
-          Running Joker — my personal AI
-          <span class="now-sub">Local LLMs, zero cloud cost, fully automated on an RTX 3080</span>
-        </span>
-      </div>
-      <div class="now-item">
-        <span class="now-dot dim"></span>
-        <span class="now-text">
-          Based in Elgin, Scotland
-          <span class="now-sub">Originally from Portugal. Working toward not having to choose.</span>
-        </span>
+    <!-- STORY -->
+    <div class="section" id="story">
+      <p class="section-eyebrow">The story</p>
+      <h2>Where I've been.<br />Where I'm going.</h2>
+      <div class="prose">
+        <p>
+          I left Portugal and built a life in Scotland. Good career, good family,
+          everything you're supposed to want. But for a long time, something wasn't right —
+          anxiety that doesn't clock out, days where just showing up takes everything you've got.
+        </p>
+        <p>
+          Building things helped. Not in a therapy-speak way. In a concrete way —
+          <em>I made this exist. It works. I did that.</em>
+          I started automating my life because I needed it to be easier.
+          I started building AI tools because I couldn't afford the ones that existed.
+          I started the Grumpy System Elf because I needed something that was mine.
+        </p>
+        <p>
+          The goal hasn't changed: <strong>financial freedom, on my own terms, from wherever I want to be.</strong>
+          Not retire-to-a-beach fantasy. Just: I work because I choose to, not because I have to.
+          I'm building toward that, one project at a time.
+        </p>
       </div>
     </div>
-  </section>
 
-  <hr class="divider" />
+    <hr class="divider" />
 
-  <!-- THINGS I BUILT -->
-  <section id="built">
-    <p class="section-label">// things I built</p>
-    <h2 class="section-title">Stuff that actually exists.</h2>
-    <div class="built-list">
+    <!-- BUILT -->
+    <div class="section" id="built">
+      <p class="section-eyebrow">Things I built</p>
+      <h2>Not demos.<br />Real things.</h2>
 
-      <a href="https://andrethegrumpysystemelf.com" target="_blank" rel="noopener" class="built-item">
-        <span class="built-item-icon">😤</span>
-        <div class="built-item-body">
-          <div class="built-item-title">Grumpy System Elf</div>
-          <p class="built-item-desc">
-            My brand and exit plan. Practical content and digital products for IT workers
-            who are exhausted by the system but still have to show up on Monday.
-            Built from scratch — content, products, automation, all of it.
-          </p>
-          <div class="built-item-tags">
-            <span class="tag">Brand</span>
-            <span class="tag">Digital Products</span>
-            <span class="tag">Content</span>
-          </div>
+      <div class="built-entry">
+        <div class="built-header">
+          <span class="built-title"><a href="https://andrethegrumpysystemelf.com" target="_blank" rel="noopener">Grumpy System Elf</a></span>
+          <span class="built-year">2025 &rarr; now</span>
         </div>
-        <span class="built-item-arrow">→</span>
-      </a>
-
-      <div class="built-item" style="cursor:default;">
-        <span class="built-item-icon">🤖</span>
-        <div class="built-item-body">
-          <div class="built-item-title">Joker — Personal AI Assistant</div>
-          <p class="built-item-desc">
-            My own AI system, running entirely on local hardware. Handles morning briefings,
-            email monitoring, content scheduling, product generation, knowledge graph memory,
-            and a voice pipeline. Built for me, not for a demo.
-          </p>
-          <div class="built-item-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Ollama</span>
-            <span class="tag">SDXL</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">RTX 3080</span>
-          </div>
-        </div>
-        <span class="built-item-arrow" style="color:transparent;">→</span>
+        <p class="built-desc">
+          My brand and my exit plan. Content and digital products for IT workers who are
+          burned out and starting to ask "is this it?" Built from nothing —
+          the website, the content pipeline, the products, the automation behind all of it.
+          This is how I'm buying back my time.
+        </p>
       </div>
 
-      <div class="built-item" style="cursor:default;">
-        <span class="built-item-icon">🎬</span>
-        <div class="built-item-body">
-          <div class="built-item-title">Autonomous Video Pipeline</div>
-          <p class="built-item-desc">
-            Daily short-form videos generated and posted without touching anything.
-            Local SDXL images, local TTS, FFmpeg edit, automatic upload.
-            Runs twice a day. Costs me nothing.
-          </p>
-          <div class="built-item-tags">
-            <span class="tag">SDXL</span>
-            <span class="tag">Kokoro TTS</span>
-            <span class="tag">FFmpeg</span>
-            <span class="tag">YouTube</span>
-            <span class="tag">TikTok</span>
-          </div>
+      <div class="built-entry">
+        <div class="built-header">
+          <span class="built-title">Joker — Personal AI System</span>
+          <span class="built-year">2024 &rarr; now</span>
         </div>
-        <span class="built-item-arrow" style="color:transparent;">→</span>
+        <p class="built-desc">
+          A full AI assistant running on my own machine. Telegram bot, morning briefings,
+          Gmail monitoring, autonomous product generation, social media scheduling,
+          video pipeline, knowledge graph memory — all running locally on an RTX 3080.
+          Zero cloud cost. Built because I needed it, not because it was a portfolio piece.
+        </p>
       </div>
 
-      <div class="built-item" style="cursor:default;">
-        <span class="built-item-icon">🧠</span>
-        <div class="built-item-body">
-          <div class="built-item-title">Knowledge Graph + Memory System</div>
-          <p class="built-item-desc">
-            Every session Joker has is distilled into a persistent knowledge graph.
-            Entity extraction, SQLite FTS5 hybrid memory, session summarisation.
-            The AI that actually remembers what matters.
-          </p>
-          <div class="built-item-tags">
-            <span class="tag">SQLite</span>
-            <span class="tag">NLP</span>
-            <span class="tag">Knowledge Graph</span>
-          </div>
+      <div class="built-entry">
+        <div class="built-header">
+          <span class="built-title">Scorpion — Cloud AI Companion</span>
+          <span class="built-year">2024</span>
         </div>
-        <span class="built-item-arrow" style="color:transparent;">→</span>
+        <p class="built-desc">
+          The first one. A lighter AI assistant for when I'm away from the main machine —
+          built on a NiPoGi mini PC, cloud-connected, always available.
+          Where I learned what I was actually capable of building.
+        </p>
+      </div>
+
+      <div class="built-entry">
+        <div class="built-header">
+          <span class="built-title">Autonomous Video Pipeline</span>
+          <span class="built-year">2025</span>
+        </div>
+        <p class="built-desc">
+          Daily short-form video generation — script, images, voice, edit, upload —
+          with no human in the loop. Runs twice a day. Posts to YouTube, TikTok, Instagram.
+          I don't touch it. That's the point.
+        </p>
       </div>
 
     </div>
-  </section>
 
-  <hr class="divider" />
+    <hr class="divider" />
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <p class="section-label">// contact</p>
-    <h2 class="section-title">Say hello.</h2>
-    <div class="contact-wrap">
-      <p>
-        I'm not looking for freelance work or sales calls.
-        But if you're a real person who wants to have a real conversation —
-        about IT, AI, building things, or getting out of the 9-to-5 —
-        <strong>I'm genuinely open to that.</strong>
-      </p>
-      <div class="contact-links">
-        <a href="mailto:andre@andrethegrumpysystemelf.com" class="contact-link">
-          <span class="contact-link-icon">✉️</span>
-          <span>
-            andre@andrethegrumpysystemelf.com
-            <span class="contact-link-sub">Email — best way to reach me</span>
-          </span>
-        </a>
-        <a href="https://www.linkedin.com/in/andre-sousa-350820a7" target="_blank" rel="noopener" class="contact-link">
-          <span class="contact-link-icon">💼</span>
-          <span>
-            LinkedIn
-            <span class="contact-link-sub">Professional background</span>
-          </span>
-        </a>
-        <a href="https://andrethegrumpysystemelf.com" target="_blank" rel="noopener" class="contact-link">
-          <span class="contact-link-icon">😤</span>
-          <span>
-            Grumpy System Elf
-            <span class="contact-link-sub">My brand — andrethegrumpysystemelf.com</span>
-          </span>
-        </a>
-        <a href="https://grumpysystemelf.gumroad.com" target="_blank" rel="noopener" class="contact-link">
-          <span class="contact-link-icon">📦</span>
-          <span>
-            Products
-            <span class="contact-link-sub">grumpysystemelf.gumroad.com</span>
-          </span>
+    <!-- HIRE -->
+    <div class="section" id="hire">
+      <p class="section-eyebrow">Work with me</p>
+      <h2>If you need someone<br />who's done it for real.</h2>
+      <div class="hire-block">
+        <p>
+          I built all of this while working full-time and managing everything else life throws at you.
+          Not in ideal conditions. Not with a team.
+          <strong>That's what you're hiring — someone who builds things that actually run.</strong>
+        </p>
+        <p>
+          I work on <strong>AI automation, IT infrastructure, and systems that run themselves</strong>.
+          If you have a real problem and a real budget, I want to hear about it.
+          Come with a brief. We'll talk about the rest.
+        </p>
+        <a href="mailto:andre@andrethegrumpysystemelf.com" class="hire-email">
+          andre@andrethegrumpysystemelf.com &rarr;
         </a>
       </div>
+      <div class="links-row">
+        <a href="https://www.linkedin.com/in/andre-sousa-350820a7" target="_blank" rel="noopener" class="link-chip">💼 LinkedIn</a>
+        <a href="https://andrethegrumpysystemelf.com" target="_blank" rel="noopener" class="link-chip">😤 Grumpy System Elf</a>
+        <a href="https://grumpysystemelf.gumroad.com" target="_blank" rel="noopener" class="link-chip">📦 Products</a>
+      </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
+  </div><!-- /page -->
+
   <footer>
-    <p>Andre Sousa &mdash; Elgin, Scotland &mdash;
-      <a href="https://andrethegrumpysystemelf.com">Grumpy System Elf</a>
-    </p>
+    Andre Sousa &mdash; Elgin, Scotland
   </footer>
 
 </body>
